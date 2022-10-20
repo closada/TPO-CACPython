@@ -1,0 +1,19 @@
+#menu a{
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+    } 
+#menu li{
+    display:inline-block;
+    width:10%;
+    padding:5px 10px;
+    background-color:#0B2B33;
+    border:1px solid #0B2B33;
+    text-align:center;
+    color:#fff;
+    }
+
+#menu li:hover{
+    background-color:#fff;
+    color:#000;
+    }
