@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaleb Ovcharka</title>
     <link rel="stylesheet" type="text/css" href="style/estilos.css"/>
+
+    <script src="js/acciones.js"></script>
 </head>
 <body>
     <div id="menu">
@@ -74,21 +76,21 @@
             </div>
 
             <div class="caucasico joshua">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="joshua">
+                <!--Img-->      <img class="" src="img/Joshua1.jpg" alt="joshua">
                 <!--Nombre-->   <h4>Joshua</h4> 
                 <!--Fec Nac-->  <h5>04/07/2019</h5>
                 <!--Origen-->   <h5>Caucaz Oryzont - Rumani</h5>
             </div>
 
             <div class="caucasico masha">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="masha">
+                <!--Img-->      <img class="" src="img/Masha 1.jpg" alt="masha">
                 <!--Nombre-->   <h4>Masha</h4> 
                 <!--Fec Nac-->  <h5>07/07/2019</h5>
                 <!--Origen-->   <h5>Kaleb Ovcharka - Argentina</h5>
             </div>
 
             <div class="caucasico berta">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="berta">
+                <!--Img-->      <img class="" src="img/Berta.jpg" alt="berta">
                 <!--Nombre-->   <h4>Berta</h4> 
                 <!--Fec Nac-->  <h5>01/04/2021</h5>
                 <!--Origen-->   <h5>Tarcos - Argentina</h5>
@@ -98,42 +100,42 @@
             <div id="tarcos">
             <h3>TARCOS</h3>
             <div class="caucasico vito">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="vito">
+                <!--Img-->      <img class="" src="img/Vito.jpeg" alt="vito">
                 <!--Nombre-->   <h4>Vito</h4> 
                 <!--Fec Nac-->  <h5>###########</h5>
                 <!--Origen-->   <h5>###########</h5>
             </div>
 
             <div class="caucasico orko">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="orko">
+                <!--Img-->      <img class="" src="img/Orko.jpeg" alt="orko">
                 <!--Nombre-->   <h4>Orko</h4> 
                 <!--Fec Nac-->  <h5>###########</h5>
                 <!--Origen-->   <h5>###########</h5>
             </div>
 
             <div class="caucasico inka">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="inka">
+                <!--Img-->      <img class="" src="img/Inka.jpeg" alt="inka">
                 <!--Nombre-->   <h4>Inka</h4> 
                 <!--Fec Nac-->  <h5>###########</h5>
                 <!--Origen-->   <h5>###########</h5>
             </div>
 
             <div class="caucasico dakota">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="dakota">
+                <!--Img-->      <img class="" src="img/Dakota.jpeg" alt="dakota">
                 <!--Nombre-->   <h4>Dakota</h4> 
                 <!--Fec Nac-->  <h5>###########</h5>
                 <!--Origen-->   <h5>###########</h5>
             </div>
 
             <div class="caucasico lamia">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="lamia">
+                <!--Img-->      <img class="" src="img/pendiente.jpg" alt="lamia">
                 <!--Nombre-->   <h4>Lamía</h4> 
                 <!--Fec Nac-->  <h5>###########</h5>
                 <!--Origen-->   <h5>###########</h5>
             </div>
 
             <div class="caucasico bushia">
-                <!--Img-->      <img class="" src="img/madre.jpg" alt="bushia">
+                <!--Img-->      <img class="" src="img/Bushia.jpeg" alt="bushia">
                 <!--Nombre-->   <h4>Bushia</h4> 
                 <!--Fec Nac-->  <h5>###########</h5>
                 <!--Origen-->   <h5>###########</h5>
@@ -158,7 +160,31 @@
     </div>
     <div id="contacto">
         <h2>Contacto</h2>
-
+        <form id="form-contacto">
+            <div>
+                <h5>Nombre:</h5>
+                <input type="text" maxlength="100">
+            </div>
+            <div>
+                <h5>Apellido:</h5>
+                <input type="text" maxlength="100">
+            </div>
+            <div>
+                <h5>Correo:</h5>
+                <input type="text" maxlength="100">
+            </div>
+            <div>
+                <h5>Telefono:</h5>
+                <input type="text" maxlength="50">
+            </div>
+            <div>
+                <h5>Su consulta:</h5>
+                <textarea maxlength="500" cols="50" rows="5"></textarea>
+            </div>
+            <div>
+                <button onclick="EnviarInfo();">Enviar formulario</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
