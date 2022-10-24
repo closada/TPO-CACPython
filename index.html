@@ -160,29 +160,29 @@
     </div>
     <div id="contacto">
         <h2>Contacto</h2>
-        <form id="form-contacto">
+        <form name="Fcontacto">
             <div>
                 <h5>Nombre:</h5>
-                <input type="text" maxlength="100">
+                <input type="text" name="nombre" maxlength="100">
             </div>
             <div>
                 <h5>Apellido:</h5>
-                <input type="text" maxlength="100">
+                <input type="text" name="apellido" maxlength="100">
             </div>
             <div>
                 <h5>Correo:</h5>
-                <input type="text" maxlength="100">
+                <input type="text" name="correo-contacto" maxlength="100">
             </div>
             <div>
                 <h5>Telefono:</h5>
-                <input type="text" maxlength="50">
+                <input type="text" name="telefono-contacto" maxlength="50">
             </div>
             <div>
                 <h5>Su consulta:</h5>
-                <textarea maxlength="500" cols="50" rows="5"></textarea>
+                <textarea maxlength="500" cols="50" rows="5" name="consulta"></textarea>
             </div>
             <div>
-                <button onclick="EnviarInfo();">Enviar formulario</button>
+                <input type="submit" value="Enviar">
             </div>
         </form>
     </div>
