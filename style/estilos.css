@@ -16,27 +16,22 @@
                 width: 100%;
                 height: auto;
                 min-width: 500px;
-                text-align: center;
+                text-align: center; 
                 }
 
 .div-content    {
-                /*display: flex; */
-                padding: 4%;
+                display: flex;
+                padding: 2%;
                 text-align: justify;
-                width:100%;
-                height: auto;
                 }
 
 .div-content div{
                 width:50%; 
-                padding: 10px;
-                float:left;
-                position:relative;
+                height: auto;
+                padding: 10px;         
                 }
 
-.caucasico      {
-                width:50%;
-                }
+
 
 .caucasico img  {
                 max-width: 200px;
