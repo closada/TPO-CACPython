@@ -1,60 +1,172 @@
 /* estructura Flexbox */
-*               {
-                box-sizing: border-box;
-                margin: 0 auto;
-                }
+*                               {
+                                box-sizing: border-box;
+                                margin: 0 auto;
+                                }
+                            
+.contenedor                     {
+                                height: auto;
+                                width: 100%;
+                                background-color: antiquewhite;
 
-.contenedor     {
-                height: auto;
-                width: 100%;
-                background-color: antiquewhite;
-                
-                }
+                                }
+                            
+.item                           {
+                                background-color: antiquewhite;
+                                width: 100%;
+                                height: auto;
+                                min-width: 500px;
+                                text-align: center; 
+                                }
+                            
+.div-content                    {
+                                display: flex;
+                                padding: 2%;
+                                text-align: justify;
+                                }
+                            
+.div-content div                {
 
-.item           {
-                background-color: antiquewhite;
-                width: 100%;
-                height: auto;
-                min-width: 500px;
-                text-align: center; 
-                }
-
-.div-content    {
-                display: flex;
-                padding: 2%;
-                text-align: justify;
-                }
-
-.div-content div{
-                width:50%; 
-                height: auto;
-                padding: 10px;         
-                }
-
-
-
-.caucasico img  {
-                max-width: 200px;
-                max-height: 200px;
-                }                
+                                height: auto;
+                                padding: 10px;
+                                flex:50%;         
+                                }
+                            
+                            
+                            
+.caucasico img                  {
+                                max-width: 200px;
+                                max-height: 200px;
+                                }                
 /********************************************************/
-#menu a         {
-                text-decoration:none;
-                color:inherit;
-                font-size:14px;
-                } 
+#menu a                         {
+                                text-decoration:none;
+                                color:inherit;
+                                font-size:14px;
+                                } 
+                            
+#menu li                        {
+                                display:inline-block;
+                                width:10%;
+                                padding:5px 10px;
+                                background-color:#0B2B33;
+                                border:1px solid #0B2B33;
+                                text-align:center;
+                                color:#fff;
+                                }
+                            
+#menu li:hover                  {
+                                background-color:#fff;
+                                color:#000;
+                                }
 
-#menu li        {
-                display:inline-block;
-                width:10%;
-                padding:5px 10px;
-                background-color:#0B2B33;
-                border:1px solid #0B2B33;
-                text-align:center;
-                color:#fff;
-                }
+/************** estilos de API ***************************/
+.w-100                          {
+                                width: 100%;
+                                }
+                            
+.h-100                          {
+                                height: 100%;
+                                }
+                            
+.overflow                       {
+                                overflow: hidden;
+                                }
 
-#menu li:hover  {
-                background-color:#fff;
-                color:#000;
-                }
+#feed-contenedor                {
+                                background-color: #000;
+                                margin:auto;
+                                width: 100%;
+                                overflow: hidden;
+                                }
+                            
+.main-galery                    {
+                                width:100%;
+                                display:flex;
+                                align-items: center;
+                                position: relative;
+                                }
+                            
+.chevron span                   {
+                                display: flex;
+                                align-items: center;
+                                position: absolute;
+                                z-index: 1;
+                                color:#0B2B33;
+                                width:4.3rem;
+                                height: 4.7rem;
+                                background-color: rgba(23,23,23,0.9);
+                                border:100%;
+                                cursor:pointer;
+                                }
+
+.chevron span:hover             {
+                                background-color: rgba(23,23,23,0.6);
+                                }
+                            
+.chevron #prev                  {
+                                padding-right: .5rem;
+                                justify-content: flex-end;
+                                left: -1.7rem;
+                                }
+                            
+.chevron #next                  {
+                                padding-right: .5rem;
+                                justify-content: flex-start;
+                                right: -1.7rem;
+                                }                    
+                            
+.galery                         {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                }
+                            
+.image                          {
+                                min-width: 20%;
+                                height: 273px;
+                                position: relative;
+                                }
+                            
+.image img                      {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center center;
+                                }
+
+.image:hover .opacity-hover     {
+                                width: 100%;
+                                }           
+                                
+.caption                        {
+                                width:100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                transform: translateY(300px);
+                                transition: transform 100ms linear;
+                                }
+
+.opacity-hover:hover  .caption  {
+                                transform: translateY(0px);
+                                }                                
+
+.caption p                      {
+                                width: 80%;
+                                color: white;
+                                }
+
+.opacity-hover                  {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                transition: background-color 300ms linear;
+                                }
+
+.opacity-hover:hover            {
+                                background-color: rgba(2,2,2,0.8);
+                                }
+
+                                

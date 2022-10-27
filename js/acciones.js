@@ -37,3 +37,13 @@ if (document.getElementsByName("consulta")[0].value == "")
         return false;
     }
 }
+
+/**************************************API *******************************/
+
+const galery = document.querySelector('.galery');
+const feed = document.querySelector('.contenedor-galery');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+
+const token = '';
+
