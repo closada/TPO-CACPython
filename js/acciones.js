@@ -39,12 +39,22 @@ if (document.getElementsByName("consulta")[0].value == "")
 }
 
 /**************************************API *******************************/
+let timer;
+let EliminarPrimerDelay;
 
 async function start() 
 {
-    const response = await fetch("https://dog.ceo/api/breeds/list/all");
-    const data = await response.json();
-    CrearLista(data.message);
+    try 
+    {
+        const response = await fetch("https://dog.ceo/api/breeds/list/all");
+        const data = await response.json();
+        CrearLista(data.message);
+    }
+    catch (Error)
+    {
+        console.log("Hubo un error con la API: ",Error);
+    }
+    
 }
 
 function CrearLista (x)
@@ -64,16 +74,56 @@ async function BuscarPerro(valor)
     {
         const response = await fetch(`https://dog.ceo/api/breed/${valor}/images`);
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
         InsertarImg(data.message);
     }
 }
 
 function InsertarImg(mens)
-{
-    document.getElementById("dog-img").innerHTML = `
-    <div class="img-ind" style="background-image: url('${mens[0]}');"></div>
-    `;
+{   
+    let pos = 0;
+    clearInterval(timer);
+    clearTimeout(EliminarPrimerDelay);
+    
+    if (mens.length > 1)
+    {
+        document.getElementById("dog-img").innerHTML = `
+        <div class="img-ind" style="background-image: url('${mens[0]}');"></div>
+        <div class="img-ind" style="background-image: url('${mens[1]}');"></div>
+        `;
+        
+        pos += 2;
+
+        if (mens.length == 2) 
+            pos = 0;
+        
+        timer = setInterval(SiguienteImg, 3000);
+        
+    } else
+    {
+        document.getElementById("dog-img").innerHTML = `
+        <div class="img-ind" style="background-image: url('${mens[0]}');"></div>
+        <div class="img-ind"></div>
+        `;
+    }
+
+
+
+    function SiguienteImg()
+    {
+        document.getElementById("dog-img").insertAdjacentHTML("beforeend", `<div class="img-ind" style="background-image: url('${mens[pos]}');"></div>`);
+        EliminarPrimerDelay = setTimeout(function () {
+            document.getElementsByClassName("img-ind")[0].remove();
+        },1000);
+
+        if(pos + 1 >= mens.length) 
+        {
+            pos = 0;
+        } else 
+        {
+            pos++;
+        }
+    }
 }
 
 start();
