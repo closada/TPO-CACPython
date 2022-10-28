@@ -40,10 +40,40 @@ if (document.getElementsByName("consulta")[0].value == "")
 
 /**************************************API *******************************/
 
-const galery = document.querySelector('.galery');
-const feed = document.querySelector('.contenedor-galery');
-const next = document.querySelector('#next');
-const prev = document.querySelector('#prev');
+async function start() 
+{
+    const response = await fetch("https://dog.ceo/api/breeds/list/all");
+    const data = await response.json();
+    CrearLista(data.message);
+}
 
-const token = '';
+function CrearLista (x)
+{
+    document.getElementById("dog").innerHTML = `
+    <select onchange="BuscarPerro(this.value);">
+    <option>Seleccione una opcion..</option>
+    ${Object.keys(x).map(function (dato) {
+        return `<option>${dato}</option>`
+    }).join('')}
+    </select>`
+}
 
+async function BuscarPerro(valor) 
+{
+    if (valor != "Seleccione una opcion..")
+    {
+        const response = await fetch(`https://dog.ceo/api/breed/${valor}/images`);
+        const data = await response.json();
+        console.log(data);
+        InsertarImg(data.message);
+    }
+}
+
+function InsertarImg(mens)
+{
+    document.getElementById("dog-img").innerHTML = `
+    <div class="img-ind" style="background-image: url('${mens[0]}');"></div>
+    `;
+}
+
+start();
