@@ -13,6 +13,7 @@ header							{
 								width: 100%;
                                 min-width: 1200px;
 								position: fixed;
+                                align-items: center;
 								}
 								
 .logoweb						{
@@ -21,7 +22,6 @@ header							{
                                 
 #menu                           {
                                 width:100%;
-                                padding: 2%;
                                 }
                                 
 h2                              {
