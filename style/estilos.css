@@ -6,17 +6,31 @@
                                 }
 								
 header							{ 
-								display:block;
+								display:flex;
 								background-color: white ;
 								color: #fff;
 								height: 100px ;
 								width: 100%;
+                                min-width: 1200px;
 								position: fixed;
 								}
 								
 .logoweb						{
 								height: 100%;
-								}								
+								}	
+                                
+#menu                           {
+                                width:100%;
+                                padding: 2%;
+                                }
+                                
+h2                              {
+                                background-color: #0B2B33;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                color:white;
+                                font-weight: lighter;
+                                }                                
 						
                             
 .contenedor                     {
@@ -40,6 +54,10 @@ header							{
 								text-align: center; 
                                 padding-top: 5px;
                                 }
+
+.dogs                           {
+                                padding-top: 100px !important;
+                                }
                             
 .div-content                    {
                                 display: flex;
@@ -57,16 +75,51 @@ header							{
 .caucasico img					{
 								display:flex;
 								width: 200px;
-								height: 200px;
+                                height: auto;
 								/* max-width: 200px; */
                                 /* max-height: 200px; */
 								}
 
-.caucasico img:hover  			{ 
-								display: flex;
+.caucasico:hover  			    { 
+								/* display: flex;
 								width:100%;
-								height:100%;
-								}                              
+								height:100%; */
+                                animation-name: SeleccionImg;
+								}    
+                                
+                                
+.caucasico                      {
+                                transition-property: all;
+                                -webkit-transition:all .9s ease; /* Safari y Chrome */
+                                -moz-transition:all .9s ease; /* Firefox */
+                                -o-transition:all .9s ease; /* IE 9 */
+                                -ms-transition:all .9s ease; /* Opera */
+                                width:100%;
+                                padding: 20px;
+                                background-color: white;
+
+                                }
+
+.caucasico:hover                {
+                                -webkit-transform:scale(1.25);
+                                -moz-transform:scale(1.25);
+                                -ms-transform:scale(1.25);
+                                -o-transform:scale(1.25);
+                                transform:scale(1.25);
+                                background-color: #3c5c64;
+                                }
+                                
+.caucasico                      {
+                                width:300px;
+                                
+                                overflow:hidden;
+                                }                                
+
+                             
+                                
+#criadero i                    {padding-bottom:10px;}    
+
+#criadero                       {text-align: center;}
                                           
 /********************************************************/
 nav 							{
