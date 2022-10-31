@@ -120,6 +120,25 @@ h2                              {
 #criadero i                    {padding-bottom:10px;}    
 
 #criadero                       {text-align: center;}
+
+.galery{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+
+.column img{
+    margin-top: 5px;
+}
+
+.imagen{
+    width: 100%;
+}
                                           
 /********************************************************/
 nav 							{
