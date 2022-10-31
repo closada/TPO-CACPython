@@ -14,6 +14,8 @@ header							{
                                 min-width: 1200px;
 								position: fixed;
                                 align-items: center;
+                                
+        
 								}
 								
 .logoweb						{
@@ -181,9 +183,9 @@ nav 							{
 #dog-img                        {
                                 flex:1;
                                 background-color: rgb(82, 82, 82);
-                                width:1200px;
+                                width:90%;
                                 height: 500px;
-                                position: relative;
+                                
                                 overflow: hidden;
                                 }
 
@@ -202,3 +204,112 @@ nav 							{
                                 opacity: 1;
                                 transform: scale(1.08);
                                 }
+
+
+/****************** RESPONSIVE **************************/
+@media all and (max-width: 800px){
+    section{
+        flex-direction: row;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .logo{
+        flex:1 1 auto;
+        width: 100%;
+        height: 80%;
+        align-items: center;
+    }
+
+    nav{
+        flex:1 1 auto;
+        height: 80%;
+        width: 100%;
+    }
+
+    nav ul {
+        padding: 2px;
+    }
+
+    .menu li                        {
+        display:inline-block;
+        width:18%;
+        padding:5px 5px;
+        text-align:center;
+        align-items: center;
+        }
+    .contacto-mapa                    {
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        text-align: justify;
+        }
+
+    form {width: auto;}    
+    iframe    {width:auto;}
+    .caucasico img					{
+        display:flex;
+        width: 100px;
+        height: auto;
+
+        }
+
+    .column{
+        flex:50%;
+    }
+}
+@media all and (max-width: 600px){
+    .section{
+        flex-direction: row;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .logo{
+        flex:1 1 auto;
+        width: 100%;
+        height: 80%;
+        align-items: center;
+    }
+
+    .nav{
+        flex:1 1 auto;
+        height: 80%;
+        width: 100%;
+    }
+
+    .nav ul {
+        padding: 2px;
+    }
+
+    .menu li                        {
+        display:inline-block;
+        width:18%;
+        padding:5px 5px;
+        text-align:center;
+        align-items: center;
+        color:#fff;
+        }
+
+    
+    .contacto-mapa                    {
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        text-align: justify;
+        }
+    .caucasico img					{
+        display:flex;
+        width: 80px;
+        height: auto;
+
+        }
+
+    .column{
+        flex:100%;
+    }
+
+}                                
