@@ -126,4 +126,3 @@ function InsertarImg(mens)
     }
 }
 
-start();
