@@ -207,7 +207,7 @@ nav 							{
 
 
 /****************** RESPONSIVE **************************/
-@media all and (max-width: 800px){
+@media all and (min-width: 600px) and (max-width: 800px){
     section{
         flex-direction: row;
     }
@@ -246,7 +246,7 @@ nav 							{
         text-align: justify;
         }
 
-    form {width: auto;}    
+     
     iframe    {width:auto;}
     .caucasico img					{
         display:flex;
@@ -284,6 +284,9 @@ nav 							{
     .nav ul {
         padding: 2px;
     }
+
+      
+    iframe    {width:auto;}
 
     .menu li                        {
         display:inline-block;
